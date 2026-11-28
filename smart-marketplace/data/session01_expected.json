@@ -1,0 +1,36 @@
+{
+  "purpose": "Fixed manual reference decisions, recorded independently of the search output.",
+  "query": {"category": "laptop", "max_price": 60000, "price_operator": "<", "stock_operator": "> 0"},
+  "expected_ids": ["P001", "P004", "P007", "P011", "P014", "P018"],
+  "counts": {
+    "records_visited": 20,
+    "category_comparisons": 20,
+    "stock_comparisons": 14,
+    "price_comparisons": 10,
+    "output_appends": 6,
+    "predicate_comparisons": 44,
+    "counted_operations": 70
+  },
+  "decisions": [
+    {"id":"P001","match":true,"reason":"Laptop; stock 12; INR 45000 is below 60000."},
+    {"id":"P002","match":false,"reason":"INR 62000 is above the price limit."},
+    {"id":"P003","match":false,"reason":"Stock is zero; the price test is skipped."},
+    {"id":"P004","match":true,"reason":"Laptop; stock 3; INR 59999 is below 60000."},
+    {"id":"P005","match":false,"reason":"Smartphone is not the laptop category."},
+    {"id":"P006","match":false,"reason":"INR 60000 equals the limit; the inequality is strict."},
+    {"id":"P007","match":true,"reason":"Laptop; stock 2; INR 39999 is below 60000."},
+    {"id":"P008","match":false,"reason":"Tablet is not the laptop category."},
+    {"id":"P009","match":false,"reason":"Desktop is not the laptop category."},
+    {"id":"P010","match":false,"reason":"INR 72000 is above the price limit."},
+    {"id":"P011","match":true,"reason":"Laptop; stock 6; INR 52000 is below 60000."},
+    {"id":"P012","match":false,"reason":"Stock is zero; the price test is skipped."},
+    {"id":"P013","match":false,"reason":"Accessories is not the laptop category."},
+    {"id":"P014","match":true,"reason":"Laptop; stock 1; INR 58000 is below 60000."},
+    {"id":"P015","match":false,"reason":"Monitor is not the laptop category."},
+    {"id":"P016","match":false,"reason":"Stock is zero; the price test is skipped even though price also fails."},
+    {"id":"P017","match":false,"reason":"Smartphone is not the laptop category; stock and price are skipped."},
+    {"id":"P018","match":true,"reason":"Laptop; stock 10; INR 29999 is below 60000."},
+    {"id":"P019","match":false,"reason":"INR 61000 is above the price limit."},
+    {"id":"P020","match":false,"reason":"Stock is zero; the price test is skipped."}
+  ]
+}

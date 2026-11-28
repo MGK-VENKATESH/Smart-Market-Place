@@ -1,0 +1,907 @@
+{
+  "title": "Hardware performance bottlenecks",
+  "cases": [
+    {
+      "size": 20,
+      "correctness": {
+        "contiguous": {
+          "equal": true,
+          "count": 6,
+          "ids_sha256": "eb56ec53ca53c5e048e72052fd5af48a4632e94bf1382c76afe48275a32730b2",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ]
+        },
+        "scattered": {
+          "equal": true,
+          "count": 6,
+          "ids_sha256": "eb56ec53ca53c5e048e72052fd5af48a4632e94bf1382c76afe48275a32730b2",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ]
+        },
+        "eager": {
+          "equal": true,
+          "count": 6,
+          "ids_sha256": "eb56ec53ca53c5e048e72052fd5af48a4632e94bf1382c76afe48275a32730b2",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ]
+        },
+        "numpy": {
+          "equal": true,
+          "count": 6,
+          "ids_sha256": "eb56ec53ca53c5e048e72052fd5af48a4632e94bf1382c76afe48275a32730b2",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018"
+          ]
+        }
+      },
+      "timing": {
+        "contiguous": {
+          "median_us": 5.255468749965075,
+          "min_us": 3.679785208987596,
+          "max_us": 6.117089867530012,
+          "samples_us": [
+            6.117089867530012,
+            5.255468749965075,
+            5.589892566604249,
+            5.856152370142809,
+            4.719580090295494,
+            4.736621121992357,
+            3.679785208987596
+          ],
+          "batch_size": 2048
+        },
+        "scattered": {
+          "median_us": 5.677246122104407,
+          "min_us": 4.356249974080129,
+          "max_us": 6.522558578581084,
+          "samples_us": [
+            4.682226517616073,
+            6.258886628529581,
+            5.677246122104407,
+            6.522558578581084,
+            4.356249974080129,
+            5.62285163141496,
+            5.800488338536525
+          ],
+          "batch_size": 1024
+        },
+        "eager_predicates": {
+          "median_us": 6.36357418670741,
+          "min_us": 4.7318359293058165,
+          "max_us": 7.199999970453064,
+          "samples_us": [
+            6.36357418670741,
+            6.14511719732036,
+            5.6785644915180455,
+            7.199999970453064,
+            4.7318359293058165,
+            6.918261703958706,
+            7.022851605142932
+          ],
+          "batch_size": 2048
+        },
+        "numpy_vectorized": {
+          "median_us": 12.247265658515971,
+          "min_us": 9.085351393878227,
+          "max_us": 19.88164058275288,
+          "samples_us": [
+            9.092382697417634,
+            19.88164058275288,
+            12.247265658515971,
+            14.613281337005901,
+            14.450976550506311,
+            9.085351393878227,
+            11.094921774201794
+          ],
+          "batch_size": 512
+        }
+      },
+      "packed_record_bytes": 640,
+      "offset_bytes": 160,
+      "simulated_cache_by_capacity_KiB": {
+        "32": {
+          "contiguous": {
+            "accesses": 20,
+            "misses": 10,
+            "hits": 10
+          },
+          "scattered": {
+            "accesses": 20,
+            "misses": 10,
+            "hits": 10
+          }
+        },
+        "256": {
+          "contiguous": {
+            "accesses": 20,
+            "misses": 10,
+            "hits": 10
+          },
+          "scattered": {
+            "accesses": 20,
+            "misses": 10,
+            "hits": 10
+          }
+        },
+        "8192": {
+          "contiguous": {
+            "accesses": 20,
+            "misses": 10,
+            "hits": 10
+          },
+          "scattered": {
+            "accesses": 20,
+            "misses": 10,
+            "hits": 10
+          }
+        }
+      },
+      "vectorization": "NumPy 2.5.4: native array expressions measured; SIMD instruction use was not inspected. Includes conversion of matching indices to IDs; array construction excluded."
+    },
+    {
+      "size": 1000,
+      "correctness": {
+        "contiguous": {
+          "equal": true,
+          "count": 300,
+          "ids_sha256": "d6f660153bfa4d731dc134687efdbfd80d35a63323dcb344280df3cf002ae376",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        },
+        "scattered": {
+          "equal": true,
+          "count": 300,
+          "ids_sha256": "d6f660153bfa4d731dc134687efdbfd80d35a63323dcb344280df3cf002ae376",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        },
+        "eager": {
+          "equal": true,
+          "count": 300,
+          "ids_sha256": "d6f660153bfa4d731dc134687efdbfd80d35a63323dcb344280df3cf002ae376",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        },
+        "numpy": {
+          "equal": true,
+          "count": 300,
+          "ids_sha256": "d6f660153bfa4d731dc134687efdbfd80d35a63323dcb344280df3cf002ae376",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        }
+      },
+      "timing": {
+        "contiguous": {
+          "median_us": 266.65000041248277,
+          "min_us": 187.92812261381187,
+          "max_us": 313.84062458528206,
+          "samples_us": [
+            209.26875004079193,
+            313.84062458528206,
+            312.63749770005234,
+            267.9624994925689,
+            187.92812261381187,
+            266.65000041248277,
+            226.23437325819395
+          ],
+          "batch_size": 32
+        },
+        "scattered": {
+          "median_us": 184.7468774940353,
+          "min_us": 182.29687702842057,
+          "max_us": 325.0250010751188,
+          "samples_us": [
+            273.3718756644521,
+            183.02500029676594,
+            325.0250010751188,
+            285.94375180546194,
+            184.7468774940353,
+            183.67499797022901,
+            182.29687702842057
+          ],
+          "batch_size": 32
+        },
+        "eager_predicates": {
+          "median_us": 359.18124922318384,
+          "min_us": 238.10625134501606,
+          "max_us": 395.6000000471249,
+          "samples_us": [
+            256.212500971742,
+            359.18124922318384,
+            395.6000000471249,
+            362.6500038080849,
+            340.31875111395493,
+            238.10625134501606,
+            376.6937516047619
+          ],
+          "batch_size": 16
+        },
+        "numpy_vectorized": {
+          "median_us": 58.1054691792815,
+          "min_us": 38.63437450490892,
+          "max_us": 73.86718698398909,
+          "samples_us": [
+            38.63437450490892,
+            73.86718698398909,
+            72.68281297001522,
+            68.50078079878585,
+            58.1054691792815,
+            42.081250285264105,
+            50.54843768448336
+          ],
+          "batch_size": 128
+        }
+      },
+      "packed_record_bytes": 32000,
+      "offset_bytes": 8000,
+      "simulated_cache_by_capacity_KiB": {
+        "32": {
+          "contiguous": {
+            "accesses": 1000,
+            "misses": 500,
+            "hits": 500
+          },
+          "scattered": {
+            "accesses": 1000,
+            "misses": 500,
+            "hits": 500
+          }
+        },
+        "256": {
+          "contiguous": {
+            "accesses": 1000,
+            "misses": 500,
+            "hits": 500
+          },
+          "scattered": {
+            "accesses": 1000,
+            "misses": 500,
+            "hits": 500
+          }
+        },
+        "8192": {
+          "contiguous": {
+            "accesses": 1000,
+            "misses": 500,
+            "hits": 500
+          },
+          "scattered": {
+            "accesses": 1000,
+            "misses": 500,
+            "hits": 500
+          }
+        }
+      },
+      "vectorization": "NumPy 2.5.4: native array expressions measured; SIMD instruction use was not inspected. Includes conversion of matching indices to IDs; array construction excluded."
+    },
+    {
+      "size": 10000,
+      "correctness": {
+        "contiguous": {
+          "equal": true,
+          "count": 3000,
+          "ids_sha256": "9518cf4203ff7ef208eba702c59f4013f0b156846ef22deff1b1082ef2f97221",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        },
+        "scattered": {
+          "equal": true,
+          "count": 3000,
+          "ids_sha256": "9518cf4203ff7ef208eba702c59f4013f0b156846ef22deff1b1082ef2f97221",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        },
+        "eager": {
+          "equal": true,
+          "count": 3000,
+          "ids_sha256": "9518cf4203ff7ef208eba702c59f4013f0b156846ef22deff1b1082ef2f97221",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        },
+        "numpy": {
+          "equal": true,
+          "count": 3000,
+          "ids_sha256": "9518cf4203ff7ef208eba702c59f4013f0b156846ef22deff1b1082ef2f97221",
+          "expected_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ],
+          "observed_first_20": [
+            "P001",
+            "P004",
+            "P007",
+            "P011",
+            "P014",
+            "P018",
+            "P001_R0001",
+            "P004_R0001",
+            "P007_R0001",
+            "P011_R0001",
+            "P014_R0001",
+            "P018_R0001",
+            "P001_R0002",
+            "P004_R0002",
+            "P007_R0002",
+            "P011_R0002",
+            "P014_R0002",
+            "P018_R0002",
+            "P001_R0003",
+            "P004_R0003"
+          ]
+        }
+      },
+      "timing": {
+        "contiguous": {
+          "median_us": 1855.6999857537448,
+          "min_us": 1807.5499683618546,
+          "max_us": 2681.999991182238,
+          "samples_us": [
+            1835.8500092290342,
+            1855.6999857537448,
+            1844.8999617248774,
+            1874.3000109679997,
+            1807.5499683618546,
+            2219.1500174812973,
+            2681.999991182238
+          ],
+          "batch_size": 2
+        },
+        "scattered": {
+          "median_us": 2107.999986037612,
+          "min_us": 1999.5999755337834,
+          "max_us": 2595.700032543391,
+          "samples_us": [
+            2111.1000096425414,
+            1999.5999755337834,
+            2025.649999268353,
+            2107.999986037612,
+            2480.000024661422,
+            2595.700032543391,
+            2012.349956203252
+          ],
+          "batch_size": 2
+        },
+        "eager_predicates": {
+          "median_us": 2599.350002128631,
+          "min_us": 2290.2500350028276,
+          "max_us": 3849.0499719046056,
+          "samples_us": [
+            2290.2500350028276,
+            2356.700017116964,
+            2599.350002128631,
+            3849.0499719046056,
+            3176.8999760970473,
+            2799.3000112473965,
+            2399.3999930098653
+          ],
+          "batch_size": 2
+        },
+        "numpy_vectorized": {
+          "median_us": 350.22500378545374,
+          "min_us": 330.9625026304275,
+          "max_us": 658.2625064766034,
+          "samples_us": [
+            330.9625026304275,
+            347.3249962553382,
+            340.9375058254227,
+            350.22500378545374,
+            387.8499992424622,
+            658.2625064766034,
+            573.9000043831766
+          ],
+          "batch_size": 8
+        }
+      },
+      "packed_record_bytes": 320000,
+      "offset_bytes": 80000,
+      "simulated_cache_by_capacity_KiB": {
+        "32": {
+          "contiguous": {
+            "accesses": 10000,
+            "misses": 5000,
+            "hits": 5000
+          },
+          "scattered": {
+            "accesses": 10000,
+            "misses": 9491,
+            "hits": 509
+          }
+        },
+        "256": {
+          "contiguous": {
+            "accesses": 10000,
+            "misses": 5000,
+            "hits": 5000
+          },
+          "scattered": {
+            "accesses": 10000,
+            "misses": 5934,
+            "hits": 4066
+          }
+        },
+        "8192": {
+          "contiguous": {
+            "accesses": 10000,
+            "misses": 5000,
+            "hits": 5000
+          },
+          "scattered": {
+            "accesses": 10000,
+            "misses": 5000,
+            "hits": 5000
+          }
+        }
+      },
+      "vectorization": "NumPy 2.5.4: native array expressions measured; SIMD instruction use was not inspected. Includes conversion of matching indices to IDs; array construction excluded."
+    }
+  ],
+  "input": "Original 20 records repeated deterministically; scattered physical order uses seed 5206. Logical query order is identical.",
+  "prediction": "Sequential physical addresses should exploit locality; scattered access may cost more. Python execution overhead can dominate or obscure this effect.",
+  "observation": "At 10000 records scattered/contiguous median ratio was 1.136. This is elapsed time, not proof of cache misses or branch stalls.",
+  "explanation": "The same offset-indexed loop and three predicates are used for both layouts. Eager evaluation removes predicate short-circuiting but performs all comparisons; it is not guaranteed faster or branch-free machine code. Actual cache counters were not collected.",
+  "cache_model": "Three independent cold fully-associative LRU simulations (32/256/8192 KiB); 64-byte lines, 32-byte aligned records. They are illustrative capacities, not measured L1/L2/L3 sizes. Offset and ID arrays, prefetching, associativity and interpreter traffic are excluded.",
+  "branch_trace": {
+    "kind": "synthetic one-bit predictor initially predicting false",
+    "grouped": {
+      "branches": 20,
+      "mispredictions": 1
+    },
+    "alternating": {
+      "branches": 20,
+      "mispredictions": 19
+    }
+  },
+  "hardware_traces": {
+    "kind": "synthetic guided traces; no NUMA/GPU hardware counters measured",
+    "numa": {
+      "assumed_local_ns": 80,
+      "assumed_remote_ns": 160,
+      "accesses": [
+        "local",
+        "remote",
+        "remote",
+        "local",
+        "remote",
+        "local",
+        "remote",
+        "local"
+      ],
+      "mixed_ns": 960,
+      "all_local_ns": 640,
+      "lesson": "Place work near its data; this serial latency sum ignores overlap and bandwidth."
+    },
+    "gpu": {
+      "input_bytes": 320000,
+      "assumed_host_link_GBps": 12,
+      "one_upload_us": 26.666666666666668,
+      "assumed_launch_us": 10,
+      "assumed_kernel_us": 4,
+      "result_bytes": 24000,
+      "one_download_us": 2.0,
+      "hierarchy": "Host RAM -> device global memory; shared memory and registers are on-chip, capacity-limited storage. Coalesced accesses reduce transactions.",
+      "lesson": "A fast kernel can lose to transfer and launch overhead. Reuse resident data; these assumed numbers are not this GPU's performance."
+    },
+    "simd": {
+      "lanes": 4,
+      "prices": [
+        45000,
+        62000,
+        55000,
+        59999
+      ],
+      "stock": [
+        12,
+        5,
+        0,
+        3
+      ],
+      "category_mask": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "price_mask": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "stock_mask": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "combined_mask": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "lesson": "Independent fixed-width comparisons can use SIMD masks. Python bitwise booleans alone do not prove native SIMD or branch-free machine code."
+    }
+  },
+  "sources": [
+    "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/"
+  ],
+  "artifact": "L02_T02",
+  "session": 2,
+  "status": "passed",
+  "run_utc": "2026-11-23T05:03:40.657742+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "os": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "logical_cpus": 24
+  },
+  "fixture_sha256": "5994728c83b124dadc36ffd2a08c8c2b786eef01645694aff183308ed03aeac1",
+  "timing_protocol": "Warm-process calibrated batches, 7 samples in seeded shuffled order; median in microseconds. timeit disables cyclic GC. No CPU pinning/cache flushing. Parsing, profiling and tracing excluded unless explicitly named."
+}

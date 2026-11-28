@@ -1,0 +1,51 @@
+/* Local inventory workspace */
+[data-testid="stMainBlockContainer"] { max-width: 1370px; padding: 3rem clamp(1.2rem, 3vw, 3.8rem) 4rem; }
+[data-testid="stAppViewContainer"] h1 { font-family: Inter, "Segoe UI", sans-serif; font-size: clamp(2.2rem, 3.2vw, 3.45rem); letter-spacing: -.055em; font-weight: 720; line-height: 1.06; }
+[data-testid="stMain"] h2, [data-testid="stMain"] h3 { letter-spacing: -.04em; }
+
+.brand { display: flex; align-items: center; gap: .8rem; line-height: 1.15; font-size: 1.16rem; font-weight: 700; letter-spacing: -.035em; padding: .6rem 0 2rem; color:#faf8ff; }
+.brand-mark { display:grid; place-items:center; width:2.9rem; height:2.9rem; border-radius: .85rem; background:#c2b7ff; color:#242039; font: 2.35rem/1 Georgia, serif; }
+.st-key-workspace_nav [data-testid="stPageLink-NavLink"] { padding: .75rem; }
+.st-key-workspace_nav [aria-current="page"] { background:#36344e; }
+[data-testid="stMain"] [data-testid="stVerticalBlockBorderWrapper"], [data-testid="stMain"] [data-testid="stVerticalBlock"][style*="border:"] { background-color:#fff; }
+.st-key-overview_metrics { margin: .3rem 0 .35rem; }
+.st-key-overview_metrics [data-testid="stMarkdownContainer"] p { font-size:.9rem; color:#4a495f; }
+.st-key-overview_metrics [data-testid="stMarkdownContainer"] [data-testid="stIconMaterial"] { color:#6752bd; }
+.st-key-overview_metrics [data-testid="stVerticalBlock"] { gap:.35rem; }
+.metric-value { font: 650 clamp(2.25rem,3.3vw,3.4rem)/1.1 Inter, "Segoe UI", sans-serif; letter-spacing:-.07em; font-variant-numeric:tabular-nums; }
+.metric-note { color:#5e6073; font-size:.84rem; padding-top:.25rem; }
+.metric-value.amber { color:#925607; } .metric-value.rose { color:#aa435c; }
+.availability { background:radial-gradient(ellipse at 95% 15%,#3e396c 0%,transparent 65%),#25243f; color:#faf9ff; border-radius:14px; padding:1.25rem 1.45rem; }
+.availability h2, .st-key-category_mix h3 { font-size:1.27rem; font-weight:650; margin:0; padding:0; line-height:1.45; }
+.ring { width: 10.8rem; aspect-ratio:1; margin:1rem auto 1.05rem; display:grid; place-items:center; border-radius:50%; background:conic-gradient(from -90deg,#b3a4ff 0 var(--healthy),#f3b574 var(--healthy) var(--available),#64617d var(--available) 100%); }
+.ring > div { background:#302d4c; width:77%; aspect-ratio:1; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.ring strong { font:650 2.6rem/1.08 Inter,"Segoe UI",sans-serif; letter-spacing:-.065em; }
+.ring span { font-size:.87rem; color:#dcd8f0; }
+.stock-row { display:flex; align-items:center; gap:.65rem; padding:.33rem 0; border-top:1px solid #504c66; font-size:.9rem; }
+.stock-row b {margin-left:auto;font-variant-numeric:tabular-nums;}
+.legend-dot { width:.6rem; height:.6rem; border-radius:3px; } .legend-dot.healthy {background:#b3a4ff;} .legend-dot.low {background:#f3b574;} .legend-dot.empty {background:#aaa6bf;}
+.st-key-category_mix { background:white; }
+.st-key-category_mix, .st-key-category_mix [data-testid="stVerticalBlock"] { gap:.42rem; }
+.st-key-category_mix [class*="st-key-mix_"] { gap:0; }
+.st-key-category_mix button { display:flex; justify-content:flex-start; min-height:1.6rem; padding:0 .2rem; border:0; background:transparent; color:#353349; }
+.st-key-category_mix button > div {width:100%;text-align:left;}
+.st-key-category_mix button p { font-size:.91rem; font-weight:560; }
+.st-key-category_mix button:hover {background:#f3f0ff;color:#573dba;}
+.mix-track { height:.34rem; border-radius:2rem; background:#efedf7; margin:.08rem .2rem .18rem; overflow:hidden; }
+.mix-track i { display:block; height:100%; background:#8371d7; border-radius:inherit; }
+.st-key-mix_laptop .mix-track i {background:#6150bb;}
+.product-meta,.product-line { display:flex; align-items:baseline; justify-content:space-between; gap:.8rem; }
+.product-meta span { font-size:.82rem; font-weight:600; color:#5e4aa9; }
+.product-meta code { font-size:.8rem; color:#696779; background:transparent; }
+.product-line { flex-wrap:wrap; margin-top:.55rem; }
+.product-line h3 { font-size:1.2rem; line-height:1.35; padding:0; margin:0; }
+.product-line b { font-variant-numeric:tabular-nums; }
+@media(max-width: 740px) {
+ [data-testid="stMainBlockContainer"] {padding:3.5rem 1rem 2rem;}
+ .st-key-overview_metrics [data-testid="stHorizontalBlock"] { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .st-key-overview_metrics [data-testid="stColumn"] { width:100%; min-width:0; }
+}
+
+.project-heading { margin: 0 0 1.35rem; padding: 0 0 1.1rem; border-bottom: 1px solid #deddea; }
+.project-heading h1 { margin: 0; color: #202138; font-size: clamp(1.55rem, 2.25vw, 2.35rem) !important;
+  letter-spacing: -.045em; font-weight: 750; line-height: 1.15; }

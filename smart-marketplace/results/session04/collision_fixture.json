@@ -1,0 +1,29 @@
+[
+  {
+    "id": "COLLISION-A",
+    "title": "CodeBook 14",
+    "description": "Synthetic distinct description 1",
+    "category": "laptop",
+    "price": 45000,
+    "stock": 12,
+    "version": 1
+  },
+  {
+    "id": "COLLISION-B",
+    "title": "CodeBook 14",
+    "description": "Synthetic distinct description 2",
+    "category": "laptop",
+    "price": 45000,
+    "stock": 12,
+    "version": 1
+  },
+  {
+    "id": "EXACT-COPY",
+    "title": "CodeBook 14",
+    "description": "Synthetic distinct description 1",
+    "category": "laptop",
+    "price": 45000,
+    "stock": 12,
+    "version": 1
+  }
+]

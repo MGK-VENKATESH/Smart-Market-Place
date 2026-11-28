@@ -1,0 +1,150 @@
+{
+  "artifact": "L01_T01",
+  "query": {
+    "category": "laptop",
+    "max_price": 60000,
+    "price_operator": "<",
+    "stock_operator": "> 0"
+  },
+  "fixture_sha256": "5994728c83b124dadc36ffd2a08c8c2b786eef01645694aff183308ed03aeac1",
+  "expected_sha256": "93ce8287132a5488c7bef720fce4421642d8a9e5e497f9b588ad7c60803c796e",
+  "run_utc": "2026-11-23T05:03:39.745814+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "implementation": "CPython",
+    "os": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "logical_cpus": 24
+  },
+  "protocol": {
+    "data": "synthetic deterministic repetitions; identical attribute mix; unique IDs; 30% matches",
+    "timed": "uninstrumented linear search, query validation and result allocation/destruction",
+    "excluded": "loading, data generation, tracing, counters, block simulation and SQL oracle",
+    "warmup": "five searches plus batch calibration; each batch targets at least 10 ms",
+    "repeats": "nine batch means; report median and min/max; timeit disables cyclic GC during each batch",
+    "limitations": "local warm-process measurements; no cache flushing, CPU pinning or parallel execution"
+  },
+  "cases": [
+    {
+      "size": 20,
+      "matches": 6,
+      "correct": true,
+      "counts": {
+        "records_visited": 20,
+        "category_comparisons": 20,
+        "stock_comparisons": 14,
+        "price_comparisons": 10,
+        "output_appends": 6,
+        "predicate_comparisons": 44,
+        "counted_operations": 70
+      },
+      "simulated_input_block_reads": {
+        "4": 5,
+        "16": 2,
+        "64": 1
+      },
+      "ideal_predicate_rounds_p4": 5,
+      "timing": {
+        "unit": "microseconds per query",
+        "samples": 9,
+        "queries_per_sample": 8192,
+        "raw_sample_means_us": [
+          1.6715331980776682,
+          1.5983886783033086,
+          2.3852783215261297,
+          2.4065063399802966,
+          2.328356941916354,
+          2.4429809570847283,
+          2.5684936559855487,
+          1.9018676766791032,
+          2.127490233760909
+        ],
+        "median_us": 2.328356941916354,
+        "min_us": 1.5983886783033086,
+        "max_us": 2.5684936559855487,
+        "ns_per_record": 116.4178470958177
+      }
+    },
+    {
+      "size": 1000,
+      "matches": 300,
+      "correct": true,
+      "counts": {
+        "records_visited": 1000,
+        "category_comparisons": 1000,
+        "stock_comparisons": 700,
+        "price_comparisons": 500,
+        "output_appends": 300,
+        "predicate_comparisons": 2200,
+        "counted_operations": 3500
+      },
+      "simulated_input_block_reads": {
+        "4": 250,
+        "16": 63,
+        "64": 16
+      },
+      "ideal_predicate_rounds_p4": 250,
+      "timing": {
+        "unit": "microseconds per query",
+        "samples": 9,
+        "queries_per_sample": 128,
+        "raw_sample_means_us": [
+          80.99218757706694,
+          78.57734362914925,
+          98.36796925810631,
+          95.99140594218625,
+          96.04453134670621,
+          96.1906252996414,
+          89.48203139880206,
+          81.50703069986776,
+          90.26640600495739
+        ],
+        "median_us": 90.26640600495739,
+        "min_us": 78.57734362914925,
+        "max_us": 98.36796925810631,
+        "ns_per_record": 90.26640600495739
+      }
+    },
+    {
+      "size": 10000,
+      "matches": 3000,
+      "correct": true,
+      "counts": {
+        "records_visited": 10000,
+        "category_comparisons": 10000,
+        "stock_comparisons": 7000,
+        "price_comparisons": 5000,
+        "output_appends": 3000,
+        "predicate_comparisons": 22000,
+        "counted_operations": 35000
+      },
+      "simulated_input_block_reads": {
+        "4": 2500,
+        "16": 625,
+        "64": 157
+      },
+      "ideal_predicate_rounds_p4": 2500,
+      "timing": {
+        "unit": "microseconds per query",
+        "samples": 9,
+        "queries_per_sample": 16,
+        "raw_sample_means_us": [
+          711.1937520676292,
+          923.8749989890493,
+          812.3687439365312,
+          878.0062489677221,
+          1048.906247888226,
+          709.5499968272634,
+          914.081247174181,
+          1094.5562535198405,
+          778.075002017431
+        ],
+        "median_us": 878.0062489677221,
+        "min_us": 709.5499968272634,
+        "max_us": 1094.5562535198405,
+        "ns_per_record": 87.8006248967722
+      }
+    }
+  ]
+}

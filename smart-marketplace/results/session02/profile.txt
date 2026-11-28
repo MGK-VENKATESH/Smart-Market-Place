@@ -1,0 +1,23 @@
+         30100 function calls in 0.040 seconds
+
+   Ordered by: cumulative time
+   List reduced from 42 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       10    0.031    0.003    0.036    0.004 hardware.py:31(packed_search)
+        1    0.000    0.000    0.016    0.016 polling_path_watcher.py:95(_check_if_path_changed)
+        1    0.000    0.000    0.016    0.016 util.py:138(path_modification_time)
+        1    0.000    0.000    0.008    0.008 util.py:229(_do_with_retries)
+        1    0.000    0.000    0.008    0.008 util.py:159(<lambda>)
+    30000    0.006    0.000    0.006    0.000 {method 'append' of 'list' objects}
+        1    0.002    0.002    0.002    0.002 {built-in method nt._path_exists}
+        1    0.001    0.001    0.001    0.001 {built-in method nt.stat}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 polling_path_watcher.py:88(_schedule)
+        1    0.000    0.000    0.000    0.000 thread.py:199(submit)
+        1    0.000    0.000    0.000    0.000 _base.py:323(__init__)
+       10    0.000    0.000    0.000    0.000 search.py:7(validate_query)
+        1    0.000    0.000    0.000    0.000 threading.py:290(__init__)
+        1    0.000    0.000    0.000    0.000 _base.py:536(set_result)
+
+

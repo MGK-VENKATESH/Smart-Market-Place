@@ -1,0 +1,12 @@
+L01_T01 | Session 1 baseline
+Query: category == laptop AND stock > 0 AND price < INR 60000
+20-record expected and observed IDs: P001, P004, P007, P011, P014, P018
+
+       n  matches  comparisons  counted ops  blocks(B=4)  median(us)  correct
+      20        6           44           70            5       2.328     PASS
+   1,000      300        2,200        3,500          250      90.266     PASS
+  10,000    3,000       22,000       35,000        2,500     878.006     PASS
+
+Counts: visits + evaluated comparisons + output appends; not CPU instructions.
+Blocks are simulated cold reads. Parallel bounds are theoretical.
+All ID lists and order agree with both the manual fixture and the SQL oracle.

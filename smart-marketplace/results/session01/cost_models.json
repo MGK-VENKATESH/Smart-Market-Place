@@ -1,0 +1,33 @@
+{
+  "ram": {
+    "time": "Theta(n); constant-size query fields and amortized O(1) append",
+    "auxiliary_space": "O(1) excluding O(k) returned IDs and O(n) loaded catalogue",
+    "count_convention": "visits + evaluated predicate comparisons + output appends",
+    "omitted_from_counts": "loop mechanics, field loads, counter updates and interpreter instructions"
+  },
+  "external_memory": {
+    "input_reads": "ceil(n/B), cold aligned scan; B is records per block, M >= B",
+    "output_writes": "excluded; add O(1+k/B_out) if k result IDs are written externally",
+    "layout": "hypothetical contiguous fixed-size records, not Python objects or JSON bytes"
+  },
+  "cache_oblivious": {
+    "input_transfers": "O(1+n/B), without using B or M in the search algorithm",
+    "interpretation": "sequential locality works across block sizes; no hardware misses were measured"
+  },
+  "parallel": {
+    "implemented_baseline": "W=Theta(n), S=Theta(n); sequential code has no parallel speedup",
+    "pram": "synchronous shared-memory processors; constant-time word operations; ideal memory access",
+    "predicate_only": "with p processors, ceil(n/p) record rounds up to constant predicate cost",
+    "compact_output": "flags + work-efficient prefix sum + distinct-position scatter",
+    "parallel_design": "W=Theta(n), S=Theta(log n), auxiliary space O(n), for n>=2",
+    "bounds": "T_p >= max(W/p,S); an ideal greedy scheduler gives T_p <= W/p + S",
+    "parallelism": "W/S=Theta(n/log n); full-query time O(n/p+log n) under the stated model",
+    "limitations": "theory only; excludes scheduling, communication, bandwidth and Python overhead"
+  },
+  "equal_big_o": "Two Theta(n) scans can have different constants, field layouts, cache misses, branch behavior, interpreter overhead and memory bandwidth. Predicate order also changes short-circuit work. Big O describes growth, not elapsed seconds.",
+  "sources": [
+    "Course session plan, Session 1 (page 2)",
+    "https://courses.csail.mit.edu/6.854/16/Notes/n28-external.html",
+    "https://jshun.csail.mit.edu/6506-f25/lectures/lecture2.pdf"
+  ]
+}

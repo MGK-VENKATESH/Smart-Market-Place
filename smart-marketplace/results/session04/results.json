@@ -1,0 +1,323 @@
+{
+  "title": "Expected complexity and fingerprints",
+  "cases": [
+    {
+      "size": 20,
+      "naive_comparisons": 180,
+      "widths": [
+        {
+          "bits": 2,
+          "comparisons": 42,
+          "collision_checks": 40,
+          "correct": true,
+          "expected_duplicate_count": 2,
+          "observed_duplicate_count": 2
+        },
+        {
+          "bits": 8,
+          "comparisons": 2,
+          "collision_checks": 0,
+          "correct": true,
+          "expected_duplicate_count": 2,
+          "observed_duplicate_count": 2
+        },
+        {
+          "bits": 16,
+          "comparisons": 2,
+          "collision_checks": 0,
+          "correct": true,
+          "expected_duplicate_count": 2,
+          "observed_duplicate_count": 2
+        },
+        {
+          "bits": 32,
+          "comparisons": 2,
+          "collision_checks": 0,
+          "correct": true,
+          "expected_duplicate_count": 2,
+          "observed_duplicate_count": 2
+        }
+      ]
+    },
+    {
+      "size": 200,
+      "naive_comparisons": 18000,
+      "widths": [
+        {
+          "bits": 2,
+          "comparisons": 4450,
+          "collision_checks": 4430,
+          "correct": true,
+          "expected_duplicate_count": 20,
+          "observed_duplicate_count": 20
+        },
+        {
+          "bits": 8,
+          "comparisons": 95,
+          "collision_checks": 75,
+          "correct": true,
+          "expected_duplicate_count": 20,
+          "observed_duplicate_count": 20
+        },
+        {
+          "bits": 16,
+          "comparisons": 20,
+          "collision_checks": 0,
+          "correct": true,
+          "expected_duplicate_count": 20,
+          "observed_duplicate_count": 20
+        },
+        {
+          "bits": 32,
+          "comparisons": 20,
+          "collision_checks": 0,
+          "correct": true,
+          "expected_duplicate_count": 20,
+          "observed_duplicate_count": 20
+        }
+      ]
+    },
+    {
+      "size": 1000,
+      "naive_comparisons": 450000,
+      "widths": [
+        {
+          "bits": 2,
+          "comparisons": 112329,
+          "collision_checks": 112229,
+          "correct": true,
+          "expected_duplicate_count": 100,
+          "observed_duplicate_count": 100
+        },
+        {
+          "bits": 8,
+          "comparisons": 1900,
+          "collision_checks": 1800,
+          "correct": true,
+          "expected_duplicate_count": 100,
+          "observed_duplicate_count": 100
+        },
+        {
+          "bits": 16,
+          "comparisons": 109,
+          "collision_checks": 9,
+          "correct": true,
+          "expected_duplicate_count": 100,
+          "observed_duplicate_count": 100
+        },
+        {
+          "bits": 32,
+          "comparisons": 100,
+          "collision_checks": 0,
+          "correct": true,
+          "expected_duplicate_count": 100,
+          "observed_duplicate_count": 100
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "naive_pairwise": {
+      "median_us": 25932.40002170205,
+      "min_us": 22709.5999289304,
+      "max_us": 35386.40006445348,
+      "samples_us": [
+        32727.799960412085,
+        27032.300014980137,
+        22855.29999062419,
+        25932.40002170205,
+        35386.40006445348,
+        22766.10000990331,
+        22709.5999289304
+      ],
+      "batch_size": 1
+    },
+    "fingerprint_32": {
+      "median_us": 2870.7500314339995,
+      "min_us": 2792.8000199608505,
+      "max_us": 3741.550026461482,
+      "samples_us": [
+        3741.550026461482,
+        2792.8000199608505,
+        3103.2999977469444,
+        2804.3000493198633,
+        2870.7500314339995,
+        2833.500038832426,
+        3167.150018271059
+      ],
+      "batch_size": 2
+    }
+  },
+  "collision_demo": {
+    "bits": 2,
+    "texts": [
+      "Synthetic distinct description 1",
+      "Synthetic distinct description 2",
+      "Synthetic distinct description 1"
+    ],
+    "fingerprints": [
+      2,
+      2,
+      2
+    ],
+    "expected_duplicate_of": {
+      "EXACT-COPY": "COLLISION-A"
+    },
+    "observed": {
+      "duplicate_of": {
+        "EXACT-COPY": "COLLISION-A"
+      },
+      "comparisons": 2,
+      "collision_checks": 1,
+      "unique_descriptions": 2,
+      "buckets": 1,
+      "bits": 2,
+      "seed": 5206
+    }
+  },
+  "seed_experiment": [
+    {
+      "seed": 1,
+      "collision_checks": 1692,
+      "correct": true
+    },
+    {
+      "seed": 2,
+      "collision_checks": 1736,
+      "correct": true
+    },
+    {
+      "seed": 3,
+      "collision_checks": 1842,
+      "correct": true
+    },
+    {
+      "seed": 4,
+      "collision_checks": 1817,
+      "correct": true
+    },
+    {
+      "seed": 5,
+      "collision_checks": 1753,
+      "correct": true
+    }
+  ],
+  "expected_duplicate_of": {
+    "P010": "P009",
+    "P020": "P019",
+    "P010_R0001": "P009_R0001",
+    "P020_R0001": "P019_R0001",
+    "P010_R0002": "P009_R0002",
+    "P020_R0002": "P019_R0002",
+    "P010_R0003": "P009_R0003",
+    "P020_R0003": "P019_R0003",
+    "P010_R0004": "P009_R0004",
+    "P020_R0004": "P019_R0004",
+    "P010_R0005": "P009_R0005",
+    "P020_R0005": "P019_R0005",
+    "P010_R0006": "P009_R0006",
+    "P020_R0006": "P019_R0006",
+    "P010_R0007": "P009_R0007",
+    "P020_R0007": "P019_R0007",
+    "P010_R0008": "P009_R0008",
+    "P020_R0008": "P019_R0008",
+    "P010_R0009": "P009_R0009",
+    "P020_R0009": "P019_R0009",
+    "P010_R0010": "P009_R0010",
+    "P020_R0010": "P019_R0010",
+    "P010_R0011": "P009_R0011",
+    "P020_R0011": "P019_R0011",
+    "P010_R0012": "P009_R0012",
+    "P020_R0012": "P019_R0012",
+    "P010_R0013": "P009_R0013",
+    "P020_R0013": "P019_R0013",
+    "P010_R0014": "P009_R0014",
+    "P020_R0014": "P019_R0014",
+    "P010_R0015": "P009_R0015",
+    "P020_R0015": "P019_R0015",
+    "P010_R0016": "P009_R0016",
+    "P020_R0016": "P019_R0016",
+    "P010_R0017": "P009_R0017",
+    "P020_R0017": "P019_R0017",
+    "P010_R0018": "P009_R0018",
+    "P020_R0018": "P019_R0018",
+    "P010_R0019": "P009_R0019",
+    "P020_R0019": "P019_R0019",
+    "P010_R0020": "P009_R0020",
+    "P020_R0020": "P019_R0020",
+    "P010_R0021": "P009_R0021",
+    "P020_R0021": "P019_R0021",
+    "P010_R0022": "P009_R0022",
+    "P020_R0022": "P019_R0022",
+    "P010_R0023": "P009_R0023",
+    "P020_R0023": "P019_R0023",
+    "P010_R0024": "P009_R0024",
+    "P020_R0024": "P019_R0024",
+    "P010_R0025": "P009_R0025",
+    "P020_R0025": "P019_R0025",
+    "P010_R0026": "P009_R0026",
+    "P020_R0026": "P019_R0026",
+    "P010_R0027": "P009_R0027",
+    "P020_R0027": "P019_R0027",
+    "P010_R0028": "P009_R0028",
+    "P020_R0028": "P019_R0028",
+    "P010_R0029": "P009_R0029",
+    "P020_R0029": "P019_R0029",
+    "P010_R0030": "P009_R0030",
+    "P020_R0030": "P019_R0030",
+    "P010_R0031": "P009_R0031",
+    "P020_R0031": "P019_R0031",
+    "P010_R0032": "P009_R0032",
+    "P020_R0032": "P019_R0032",
+    "P010_R0033": "P009_R0033",
+    "P020_R0033": "P019_R0033",
+    "P010_R0034": "P009_R0034",
+    "P020_R0034": "P019_R0034",
+    "P010_R0035": "P009_R0035",
+    "P020_R0035": "P019_R0035",
+    "P010_R0036": "P009_R0036",
+    "P020_R0036": "P019_R0036",
+    "P010_R0037": "P009_R0037",
+    "P020_R0037": "P019_R0037",
+    "P010_R0038": "P009_R0038",
+    "P020_R0038": "P019_R0038",
+    "P010_R0039": "P009_R0039",
+    "P020_R0039": "P019_R0039",
+    "P010_R0040": "P009_R0040",
+    "P020_R0040": "P019_R0040",
+    "P010_R0041": "P009_R0041",
+    "P020_R0041": "P019_R0041",
+    "P010_R0042": "P009_R0042",
+    "P020_R0042": "P019_R0042",
+    "P010_R0043": "P009_R0043",
+    "P020_R0043": "P019_R0043",
+    "P010_R0044": "P009_R0044",
+    "P020_R0044": "P019_R0044",
+    "P010_R0045": "P009_R0045",
+    "P020_R0045": "P019_R0045",
+    "P010_R0046": "P009_R0046",
+    "P020_R0046": "P019_R0046",
+    "P010_R0047": "P009_R0047",
+    "P020_R0047": "P019_R0047",
+    "P010_R0048": "P009_R0048",
+    "P020_R0048": "P019_R0048",
+    "P010_R0049": "P009_R0049",
+    "P020_R0049": "P019_R0049"
+  },
+  "input": "Catalogue-derived descriptions: append a unique listing variant except every tenth description copies its predecessor. Product IDs are retained.",
+  "explanation": "A fingerprint match only selects candidates. Exact string equality decides duplicates, so collisions affect work but never merge different text. Results flag duplicate descriptions for review; they do not delete catalogue records.",
+  "complexity": "Hashing costs O(total text bytes). Under a uniform-fingerprint assumption each unequal pair collides with probability 2^-b; expected unequal pair collisions among u distinct texts are u*(u-1)/(2*2^b). Bucket verification also includes true duplicates. Adversarial collisions can force quadratic comparisons; exact comparison cost depends on text length.",
+  "hash_assumption": "Seeded keyed BLAKE2b truncated to b bits is used as a reproducible practical fingerprint, not claimed to be a proven universal hash family. Python dictionary lookup is expected O(1), not a worst-case guarantee.",
+  "artifact": "L04_T04",
+  "session": 4,
+  "status": "passed",
+  "run_utc": "2026-11-23T05:03:41.116388+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "os": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "logical_cpus": 24
+  },
+  "fixture_sha256": "5994728c83b124dadc36ffd2a08c8c2b786eef01645694aff183308ed03aeac1",
+  "timing_protocol": "Warm-process calibrated batches, 7 samples in seeded shuffled order; median in microseconds. timeit disables cyclic GC. No CPU pinning/cache flushing. Parsing, profiling and tracing excluded unless explicitly named."
+}

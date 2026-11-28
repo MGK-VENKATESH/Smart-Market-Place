@@ -1,0 +1,142 @@
+[
+  {
+    "timestamp_ms": 1800000000000,
+    "user_id": "anon-000",
+    "kind": "view",
+    "product_id": "P001",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000001000,
+    "user_id": "anon-001",
+    "kind": "view",
+    "product_id": "P002",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000002000,
+    "user_id": "anon-002",
+    "kind": "view",
+    "product_id": "P003",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000003000,
+    "user_id": "anon-003",
+    "kind": "view",
+    "product_id": "P004",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000004000,
+    "user_id": "anon-004",
+    "kind": "view",
+    "product_id": "P005",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000005000,
+    "user_id": "anon-005",
+    "kind": "view",
+    "product_id": "P006",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000006000,
+    "user_id": "anon-006",
+    "kind": "view",
+    "product_id": "P007",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000007000,
+    "user_id": "anon-007",
+    "kind": "view",
+    "product_id": "P008",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000008000,
+    "user_id": "anon-008",
+    "kind": "view",
+    "product_id": "P009",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000009000,
+    "user_id": "anon-009",
+    "kind": "view",
+    "product_id": "P010",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000010000,
+    "user_id": "anon-010",
+    "kind": "view",
+    "product_id": "P011",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000011000,
+    "user_id": "anon-011",
+    "kind": "view",
+    "product_id": "P012",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000012000,
+    "user_id": "anon-012",
+    "kind": "view",
+    "product_id": "P013",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000013000,
+    "user_id": "anon-013",
+    "kind": "view",
+    "product_id": "P014",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000014000,
+    "user_id": "anon-014",
+    "kind": "view",
+    "product_id": "P015",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000015000,
+    "user_id": "anon-015",
+    "kind": "view",
+    "product_id": "P016",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000016000,
+    "user_id": "anon-016",
+    "kind": "view",
+    "product_id": "P017",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000017000,
+    "user_id": "anon-017",
+    "kind": "view",
+    "product_id": "P018",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000018000,
+    "user_id": "anon-018",
+    "kind": "view",
+    "product_id": "P019",
+    "query": null
+  },
+  {
+    "timestamp_ms": 1800000019000,
+    "user_id": "anon-019",
+    "kind": "view",
+    "product_id": "P020",
+    "query": null
+  }
+]

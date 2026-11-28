@@ -1,0 +1,182 @@
+[
+  {
+    "id": "P001",
+    "title": "CodeBook 14",
+    "description": "14-inch laptop with 8 GB RAM and 256 GB SSD.",
+    "category": "laptop",
+    "price": 45000,
+    "stock": 12,
+    "version": 1
+  },
+  {
+    "id": "P002",
+    "title": "ProBook 15",
+    "description": "15-inch laptop with 16 GB RAM and 512 GB SSD.",
+    "category": "laptop",
+    "price": 62000,
+    "stock": 5,
+    "version": 1
+  },
+  {
+    "id": "P003",
+    "title": "StudyBook Plus",
+    "description": "Student laptop with 16 GB RAM, currently unavailable.",
+    "category": "laptop",
+    "price": 55000,
+    "stock": 0,
+    "version": 1
+  },
+  {
+    "id": "P004",
+    "title": "DevBook Air",
+    "description": "Lightweight programming laptop just below the price limit.",
+    "category": "laptop",
+    "price": 59999,
+    "stock": 3,
+    "version": 1
+  },
+  {
+    "id": "P005",
+    "title": "Pocket One",
+    "description": "Smartphone with a 128 GB storage capacity.",
+    "category": "smartphone",
+    "price": 28000,
+    "stock": 20,
+    "version": 1
+  },
+  {
+    "id": "P006",
+    "title": "BoundaryBook",
+    "description": "Laptop priced exactly at the exclusive price limit.",
+    "category": "laptop",
+    "price": 60000,
+    "stock": 7,
+    "version": 1
+  },
+  {
+    "id": "P007",
+    "title": "Everyday 14",
+    "description": "Everyday laptop for browsing and introductory programming.",
+    "category": "laptop",
+    "price": 39999,
+    "stock": 2,
+    "version": 1
+  },
+  {
+    "id": "P008",
+    "title": "StudyTab 10",
+    "description": "10-inch tablet for reading and taking notes.",
+    "category": "tablet",
+    "price": 22000,
+    "stock": 11,
+    "version": 1
+  },
+  {
+    "id": "P009",
+    "title": "DeskStation",
+    "description": "Desktop computer with a compact tower case.",
+    "category": "desktop",
+    "price": 48000,
+    "stock": 4,
+    "version": 1
+  },
+  {
+    "id": "P010",
+    "title": "CreatorBook",
+    "description": "Performance laptop for content creation.",
+    "category": "laptop",
+    "price": 72000,
+    "stock": 1,
+    "version": 1
+  },
+  {
+    "id": "P011",
+    "title": "CampusBook 15",
+    "description": "15-inch laptop with a full-size keyboard.",
+    "category": "laptop",
+    "price": 52000,
+    "stock": 6,
+    "version": 1
+  },
+  {
+    "id": "P012",
+    "title": "StarterBook",
+    "description": "Entry-level laptop awaiting a stock replenishment.",
+    "category": "laptop",
+    "price": 35000,
+    "stock": 0,
+    "version": 1
+  },
+  {
+    "id": "P013",
+    "title": "Travel Mouse",
+    "description": "Wireless mouse for portable computers.",
+    "category": "accessories",
+    "price": 1800,
+    "stock": 30,
+    "version": 1
+  },
+  {
+    "id": "P014",
+    "title": "WorkBook Slim",
+    "description": "Slim laptop with 16 GB RAM and a 512 GB SSD.",
+    "category": "laptop",
+    "price": 58000,
+    "stock": 1,
+    "version": 1
+  },
+  {
+    "id": "P015",
+    "title": "ViewPanel 24",
+    "description": "24-inch monitor for a desk workspace.",
+    "category": "monitor",
+    "price": 14000,
+    "stock": 9,
+    "version": 1
+  },
+  {
+    "id": "P016",
+    "title": "StudioBook",
+    "description": "Higher-price laptop with no current stock.",
+    "category": "laptop",
+    "price": 65000,
+    "stock": 0,
+    "version": 1
+  },
+  {
+    "id": "P017",
+    "title": "Pocket Max",
+    "description": "Smartphone currently out of stock.",
+    "category": "smartphone",
+    "price": 35000,
+    "stock": 0,
+    "version": 1
+  },
+  {
+    "id": "P018",
+    "title": "BasicBook 13",
+    "description": "Affordable 13-inch laptop for basic coursework.",
+    "category": "laptop",
+    "price": 29999,
+    "stock": 10,
+    "version": 1
+  },
+  {
+    "id": "P019",
+    "title": "PowerBook 14",
+    "description": "14-inch laptop priced above the query limit.",
+    "category": "laptop",
+    "price": 61000,
+    "stock": 2,
+    "version": 1
+  },
+  {
+    "id": "P020",
+    "title": "ReadyBook",
+    "description": "Laptop below the limit but currently unavailable.",
+    "category": "laptop",
+    "price": 59999,
+    "stock": 0,
+    "version": 1
+  }
+]

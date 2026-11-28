@@ -1,0 +1,439 @@
+{
+  "title": "Profiling-driven optimisation",
+  "size": 1000,
+  "event_count": 1000,
+  "queries": [
+    [
+      "laptop",
+      60000
+    ],
+    [
+      "tablet",
+      30000
+    ],
+    [
+      "smartphone",
+      50000
+    ],
+    [
+      "laptop",
+      60000
+    ],
+    [
+      "tablet",
+      30000
+    ],
+    [
+      "smartphone",
+      50000
+    ],
+    [
+      "laptop",
+      60000
+    ],
+    [
+      "tablet",
+      30000
+    ],
+    [
+      "smartphone",
+      50000
+    ]
+  ],
+  "before_profile": [
+    {
+      "function": "naive_duplicates",
+      "file": "duplicates.py",
+      "line": 40,
+      "calls": 1,
+      "self_seconds": 0.017133000000000002,
+      "cumulative_seconds": 0.0172231
+    },
+    {
+      "function": "<lambda>",
+      "file": "session05.py",
+      "line": 34,
+      "calls": 2,
+      "self_seconds": 0.015552000000000002,
+      "cumulative_seconds": 0.0190396
+    },
+    {
+      "function": "<built-in method nt._path_isdir>",
+      "file": "~",
+      "line": 0,
+      "calls": 1,
+      "self_seconds": 0.0075858,
+      "cumulative_seconds": 0.0076549
+    },
+    {
+      "function": "append",
+      "file": "events.py",
+      "line": 46,
+      "calls": 1000,
+      "self_seconds": 0.0018666000000000002,
+      "cumulative_seconds": 0.0052158000000000005
+    },
+    {
+      "function": "capacity",
+      "file": "events.py",
+      "line": 38,
+      "calls": 6011,
+      "self_seconds": 0.0016135000000000001,
+      "cumulative_seconds": 0.0023480000000000003
+    },
+    {
+      "function": "potential",
+      "file": "events.py",
+      "line": 42,
+      "calls": 3000,
+      "self_seconds": 0.000998,
+      "cumulative_seconds": 0.0021529
+    },
+    {
+      "function": "linear_search",
+      "file": "search.py",
+      "line": 14,
+      "calls": 9,
+      "self_seconds": 0.0008977000000000001,
+      "cumulative_seconds": 0.0011635
+    },
+    {
+      "function": "<built-in method builtins.len>",
+      "file": "~",
+      "line": 0,
+      "calls": 6015,
+      "self_seconds": 0.0007417000000000001,
+      "cumulative_seconds": 0.0007417000000000001
+    },
+    {
+      "function": "<method 'append' of 'list' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 2100,
+      "self_seconds": 0.00044600000000000005,
+      "cumulative_seconds": 0.00044600000000000005
+    },
+    {
+      "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 1,
+      "self_seconds": 0.0003038,
+      "cumulative_seconds": 0.0003038
+    },
+    {
+      "function": "ingest_and_search",
+      "file": "ingestion.py",
+      "line": 7,
+      "calls": 1,
+      "self_seconds": 0.0002473,
+      "cumulative_seconds": 0.0190196
+    },
+    {
+      "function": "__iter__",
+      "file": "events.py",
+      "line": 68,
+      "calls": 1001,
+      "self_seconds": 0.0001811,
+      "cumulative_seconds": 0.0001811
+    },
+    {
+      "function": "<built-in method nt._getfinalpathname>",
+      "file": "~",
+      "line": 0,
+      "calls": 1,
+      "self_seconds": 0.00012020000000000001,
+      "cumulative_seconds": 0.00012440000000000002
+    },
+    {
+      "function": "create_string_buffer",
+      "file": "__init__.py",
+      "line": 52,
+      "calls": 1,
+      "self_seconds": 3.82e-05,
+      "cumulative_seconds": 4.2600000000000005e-05
+    },
+    {
+      "function": "repeated_scan",
+      "file": "query_engines.py",
+      "line": 23,
+      "calls": 1,
+      "self_seconds": 3.54e-05,
+      "cumulative_seconds": 0.0013289
+    },
+    {
+      "function": "validate_query",
+      "file": "search.py",
+      "line": 7,
+      "calls": 9,
+      "self_seconds": 2.7400000000000002e-05,
+      "cumulative_seconds": 3.5000000000000004e-05
+    },
+    {
+      "function": "<built-in method _winapi.LCMapStringEx>",
+      "file": "~",
+      "line": 0,
+      "calls": 3,
+      "self_seconds": 2.1400000000000002e-05,
+      "cumulative_seconds": 2.1400000000000002e-05
+    },
+    {
+      "function": "dispatch_events",
+      "file": "api.py",
+      "line": 378,
+      "calls": 1,
+      "self_seconds": 1.93e-05,
+      "cumulative_seconds": 0.0194538
+    },
+    {
+      "function": "_normalize_path_for_comparison",
+      "file": "util.py",
+      "line": 46,
+      "calls": 2,
+      "self_seconds": 1.72e-05,
+      "cumulative_seconds": 5.5400000000000005e-05
+    },
+    {
+      "function": "normcase",
+      "file": "<frozen ntpath>",
+      "line": 50,
+      "calls": 3,
+      "self_seconds": 1.7100000000000002e-05,
+      "cumulative_seconds": 4.9500000000000004e-05
+    }
+  ],
+  "after_profile": [
+    {
+      "function": "find_duplicates",
+      "file": "duplicates.py",
+      "line": 20,
+      "calls": 1,
+      "self_seconds": 0.011112700000000001,
+      "cumulative_seconds": 0.014700900000000001
+    },
+    {
+      "function": "fingerprint",
+      "file": "duplicates.py",
+      "line": 11,
+      "calls": 1001,
+      "self_seconds": 0.0039185,
+      "cumulative_seconds": 0.0055637
+    },
+    {
+      "function": "append",
+      "file": "events.py",
+      "line": 46,
+      "calls": 1000,
+      "self_seconds": 0.0024117,
+      "cumulative_seconds": 0.006223800000000001
+    },
+    {
+      "function": "capacity",
+      "file": "events.py",
+      "line": 38,
+      "calls": 6011,
+      "self_seconds": 0.0018568,
+      "cumulative_seconds": 0.0027311
+    },
+    {
+      "function": "potential",
+      "file": "events.py",
+      "line": 42,
+      "calls": 3000,
+      "self_seconds": 0.0010763,
+      "cumulative_seconds": 0.0024172
+    },
+    {
+      "function": "<built-in method builtins.len>",
+      "file": "~",
+      "line": 0,
+      "calls": 6012,
+      "self_seconds": 0.0008758,
+      "cumulative_seconds": 0.0008758
+    },
+    {
+      "function": "<method 'digest' of '_blake2.blake2b' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 1001,
+      "self_seconds": 0.0008062000000000001,
+      "cumulative_seconds": 0.0008062000000000001
+    },
+    {
+      "function": "linear_search",
+      "file": "search.py",
+      "line": 14,
+      "calls": 9,
+      "self_seconds": 0.0007085,
+      "cumulative_seconds": 0.0009524000000000001
+    },
+    {
+      "function": "<method 'append' of 'list' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 2101,
+      "self_seconds": 0.0004171,
+      "cumulative_seconds": 0.0004171
+    },
+    {
+      "function": "<method 'setdefault' of 'dict' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 1000,
+      "self_seconds": 0.0003578,
+      "cumulative_seconds": 0.0003578
+    },
+    {
+      "function": "<method 'encode' of 'str' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 1001,
+      "self_seconds": 0.0003176,
+      "cumulative_seconds": 0.0003176
+    },
+    {
+      "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 1,
+      "self_seconds": 0.0002882,
+      "cumulative_seconds": 0.0002882
+    },
+    {
+      "function": "<built-in method from_bytes>",
+      "file": "~",
+      "line": 0,
+      "calls": 1001,
+      "self_seconds": 0.0002657,
+      "cumulative_seconds": 0.0002657
+    },
+    {
+      "function": "<method 'to_bytes' of 'int' objects>",
+      "file": "~",
+      "line": 0,
+      "calls": 1001,
+      "self_seconds": 0.00025570000000000004,
+      "cumulative_seconds": 0.00025570000000000004
+    },
+    {
+      "function": "__iter__",
+      "file": "events.py",
+      "line": 68,
+      "calls": 1001,
+      "self_seconds": 0.00012550000000000001,
+      "cumulative_seconds": 0.00012550000000000001
+    },
+    {
+      "function": "<built-in method builtins.sum>",
+      "file": "~",
+      "line": 0,
+      "calls": 1,
+      "self_seconds": 6.83e-05,
+      "cumulative_seconds": 6.83e-05
+    },
+    {
+      "function": "join",
+      "file": "<frozen ntpath>",
+      "line": 99,
+      "calls": 1,
+      "self_seconds": 4.8400000000000004e-05,
+      "cumulative_seconds": 5.75e-05
+    },
+    {
+      "function": "_parse_event_buffer",
+      "file": "winapi.py",
+      "line": 262,
+      "calls": 1,
+      "self_seconds": 4.3100000000000004e-05,
+      "cumulative_seconds": 8.230000000000001e-05
+    },
+    {
+      "function": "cast",
+      "file": "__init__.py",
+      "line": 613,
+      "calls": 1,
+      "self_seconds": 2.4200000000000002e-05,
+      "cumulative_seconds": 2.4200000000000002e-05
+    },
+    {
+      "function": "validate_query",
+      "file": "search.py",
+      "line": 7,
+      "calls": 9,
+      "self_seconds": 1.4200000000000001e-05,
+      "cumulative_seconds": 1.9200000000000003e-05
+    }
+  ],
+  "timing": {
+    "before": {
+      "median_us": 31449.200003407896,
+      "min_us": 29016.299988143146,
+      "max_us": 39000.39999280125,
+      "samples_us": [
+        39000.39999280125,
+        30625.700019299984,
+        31190.000008791685,
+        31449.200003407896,
+        32061.000005342066,
+        29016.299988143146,
+        37102.39997599274
+      ],
+      "batch_size": 1
+    },
+    "after": {
+      "median_us": 6491.199950687587,
+      "min_us": 4458.899958990514,
+      "max_us": 6852.300022728741,
+      "samples_us": [
+        6045.199930667877,
+        6706.299958750606,
+        6616.79997574538,
+        6491.199950687587,
+        6852.300022728741,
+        5900.799995288253,
+        4458.899958990514
+      ],
+      "batch_size": 1
+    }
+  },
+  "speedup": 4.8448977449965325,
+  "additional_peak_python_bytes": {
+    "before": 40096,
+    "after": 158592
+  },
+  "correctness": {
+    "full_pipeline_equal": true,
+    "duplicate_count": 100,
+    "query_match_counts": [
+      300,
+      50,
+      50,
+      300,
+      50,
+      50,
+      300,
+      50,
+      50
+    ],
+    "events_preserved": true
+  },
+  "measured_bottleneck": "Largest self-time entry before change: naive_duplicates (0.017133 profiler seconds). Full before/after call tables are saved.",
+  "one_change": "Replace pairwise unique-description comparisons with seeded 32-bit fingerprint buckets plus exact verification. Event buffering, search queries, input and output contracts are unchanged.",
+  "observation": "Median speedup = 4.84x.",
+  "explanation": "Profiling locates work; unprofiled repeated timings evaluate the change. Pairwise deduplication has quadratic worst-case comparisons. Fingerprinting reduces candidate comparisons under its hash assumptions but adds hashing/storage overhead, so small or highly duplicated inputs may not benefit. Cache/branch changes would instead affect constants without changing asymptotic scan growth.",
+  "sources": [
+    "https://docs.python.org/3.14/library/profile.html"
+  ],
+  "artifact": "L05_T05",
+  "session": 5,
+  "status": "passed",
+  "run_utc": "2026-11-23T05:03:41.954893+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "os": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "logical_cpus": 24
+  },
+  "fixture_sha256": "5994728c83b124dadc36ffd2a08c8c2b786eef01645694aff183308ed03aeac1",
+  "timing_protocol": "Warm-process calibrated batches, 7 samples in seeded shuffled order; median in microseconds. timeit disables cyclic GC. No CPU pinning/cache flushing. Parsing, profiling and tracing excluded unless explicitly named."
+}

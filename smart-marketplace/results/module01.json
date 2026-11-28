@@ -1,0 +1,43 @@
+{
+  "module": 1,
+  "status": "passed",
+  "sessions": [
+    {
+      "session": 1,
+      "title": "Computational models",
+      "status": "passed",
+      "run_utc": "2026-11-23T05:03:39.745814+00:00"
+    },
+    {
+      "session": 2,
+      "title": "Hardware bottlenecks",
+      "status": "passed",
+      "run_utc": "2026-11-23T05:03:40.657742+00:00"
+    },
+    {
+      "session": 3,
+      "title": "Amortised analysis",
+      "status": "passed",
+      "run_utc": "2026-11-23T05:03:40.707476+00:00"
+    },
+    {
+      "session": 4,
+      "title": "Expected complexity",
+      "status": "passed",
+      "run_utc": "2026-11-23T05:03:41.116388+00:00"
+    },
+    {
+      "session": 5,
+      "title": "Profiling and optimisation",
+      "status": "passed",
+      "run_utc": "2026-11-23T05:03:41.954893+00:00"
+    },
+    {
+      "session": 6,
+      "title": "Choosing a model",
+      "status": "passed",
+      "run_utc": "2026-11-23T05:03:44.500787+00:00"
+    }
+  ],
+  "hardware_evidence": "Python/NumPy elapsed times measured; cache, predictor, NUMA, GPU and SIMD lane examples explicitly simulated or guided."
+}
